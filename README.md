@@ -1,7 +1,7 @@
 # proactive-chat-complete
 This is a complete repository of the progress that I have made on the proactive Omnichannel 365 chat widget.
 
-Each fdirectory is a different implementation.
+Each directory is a different implementation.
 
 The "custom button" directory is the custom chat button/potential custom proactive chat.
 
