@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0329)https://oc-cdn-ocprod.azureedge.net/livechatwidget/WebChatControl/htmls/chat.html?&id=Microsoft_Omnichannel_LCWidget&data-app-id=81ee3835-bcf7-4c4b-aa55-b55caed43d0e&data-org-id=5e6eb5b2-fe57-4b0c-a55d-392d0141c62e&data-org-url=https://byupathway-crm.omnichannelengagementhub.com&hostname=www.byupathway.org&data-lcw-version=prod -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Live Chat Widget Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><script src="./LiveChatWidgetLibs.min.js.download" type="text/javascript"></script><script src="./LiveChatWidgetScripts.min.js.download" type="text/javascript"></script><link href="./LiveChatWidgetAll.min.css" rel="stylesheet" type="text/css" id="https://oc-cdn-ocprod.azureedge.net/livechatwidget/WebChatControl/styles/LiveChatWidgetAll.min.css"><meta name="viewport" content="width=device-width, initial-scale=1"><script src="./jquery-3.4.1.min.js.download" type="text/javascript" id="https://oc-cdn-ocprod.azureedge.net/livechatwidget/WebChatControl/lib/jquery-3.4.1.min.js"></script><script src="./appinsights.js.download" type="text/javascript" id="https://oc-cdn-ocprod.azureedge.net/livechatwidget/WebChatControl/lib/appinsights.js"></script><script src="./webchat.js.download" type="text/javascript" id="https://cdn.botframework.com/botframework-webchat/4.14.1/webchat.js"></script><script src="./ai.2.min.js.download" crossorigin="anonymous"></script><meta name="react-film" content="version=3.0.1"><meta name="react-scroll-to-bottom:version" content="4.1.1"><meta name="web-speech-cognitive-services" content="version=7.1.1"><meta name="botframework-directlinespeech:version" content="4.14.1"><meta name="botframework-webchat:bundle:variant" content="full"><meta name="botframework-webchat:bundle:version" content="4.14.1"><meta name="botframework-webchat:core:version" content="4.14.1"><meta name="botframework-webchat:ui:version" content="4.14.1"><script src="./purify.min.js.download" type="text/javascript" id="https://oc-cdn-ocprod.azureedge.net/livechatwidget/WebChatControl/lib/purify.min.js"></script><script src="./botframework-webchat-adapter-ic3.production.min.js.download" type="text/javascript" id="https://oc-cdn-ocprod.azureedge.net/livechatwidget/WebChatControl/lib/botframework-webchat-adapter-ic3.production.min.js"></script><meta name="botframework-webchat-adapter-ic3" content="version=0.1.0-master.2dba07b"><script src="./SDK.min.js.download" type="text/javascript" id="https://comms.omnichannelengagementhub.com/ams/0.1.1-main.af545b3/SDK.min.js"></script><script src="./chat-adapter-0.0.35-beta.3.js.download" type="text/javascript" id="https://oc-cdn-ocprod.azureedge.net/livechatwidget/WebChatControl/lib/chat-adapter-0.0.35-beta.3.js"></script><script src="./SDK.min.js(1).download" type="text/javascript" id="https://ocsdk-prod.azureedge.net/release/0.3.1-main.3c5f8b4/SDK.min.js"></script><script src="./1033.js.download" type="text/javascript" id="https://oc-cdn-ocprod.azureedge.net/livechatwidget/WebChatControl/scripts/locale/1033.js"></script></head>
+    <body>	
+        <script>
+            const MicrosoftOmnichannelLCWidgetChatIframePageId = "Microsoft_Omnichannel_LCWidget_Chat_Iframe_Window";
+            const MicrosoftOmnichannelLCWidget = "Microsoft_Omnichannel_LCWidget";
+            const DataAppId = "data-app-id";
+            const DataOrgId = "data-org-id";
+            const DataOrgUrl = "data-org-url";
+            const HostName = "hostname";
+            const OpenChatInPopOutWindow = "data-open-in-window";
+            const DisableTelemetry = "data-disable-telemetry";
+            const IsPopOutMode = "is-popout-mode";
+			const IsCustomPopOutMode = "is-custom-popout-mode";
+            const LiveChatWidgetHideChatButton = "data-hide-chat-button";
+            const LiveChatWidgetHideMinimizeButton = "data-hide-minimize-button";
+			const LiveChatWidgetEnableCustomCloseButtonText = "data-custom-close-button-text";
+			const EnableAutofill = "data-enable-lcw-autofill";
+			const BypassCache = "data-bypass-cache";
+            const RenderOnMobileDevice = "data-render-mobile";
+            const WidgetFontFamily = "data-font-family-override"
+            const LcwVersion = "data-lcw-version";
+            const EnableNewLine = "data-enable-newline";
+            const EnableMarkdown = "data-enable-markdown";
+            const WidgetThemeColor = "data-color-override";
+            const SRC = "src";
+            const ID = "id";
+            const BrowserIconType = 'image/x-icon';
+            const BrowserIconRel = 'icon'
+            const ChatPageReadyMessage = "MicrosoftOmnichannelLCWidgetChatIframeWindowReady";
+            const WebChatControl = "WebChatControl";
+            const Scripts = "scripts";
+            const BootstrapperFile = "LiveChatBootstrapper.js";
+			const SuggestedActionLayout = "data-suggested-action-layout";
+            window[MicrosoftOmnichannelLCWidgetChatIframePageId] = true;
+
+            const fetchBootstrapperScriptPath = function() {
+                return window.location.origin.concat(window.location.pathname.replace("/htmls/chat.html", "/"+Scripts+"/"+BootstrapperFile));
+            }
+
+            const attachBootScript = function(parameters) {
+                let scriptElement = document.createElement("script");
+                scriptElement.id = parameters[ID];
+                scriptElement.src = fetchBootstrapperScriptPath();
+                scriptElement.setAttribute(DataAppId, parameters[DataAppId]);
+                scriptElement.setAttribute(DataOrgId, parameters[DataOrgId]);
+                scriptElement.setAttribute(DataOrgUrl, parameters[DataOrgUrl]);
+                scriptElement.setAttribute(HostName, parameters[HostName]);
+                scriptElement.setAttribute(OpenChatInPopOutWindow, parameters[OpenChatInPopOutWindow]);
+                scriptElement.setAttribute(IsPopOutMode, parameters[IsPopOutMode] || "false");
+				scriptElement.setAttribute(IsCustomPopOutMode, parameters[IsCustomPopOutMode] || "false");
+                scriptElement.setAttribute(DisableTelemetry, parameters[DisableTelemetry] || "false");
+                scriptElement.setAttribute(LiveChatWidgetHideChatButton, parameters[LiveChatWidgetHideChatButton] || "false");
+                scriptElement.setAttribute(RenderOnMobileDevice, parameters[RenderOnMobileDevice] || "false");
+                scriptElement.setAttribute(LcwVersion, parameters[LcwVersion] || "prod");
+				scriptElement.setAttribute(EnableAutofill, parameters[EnableAutofill] || "false");
+				scriptElement.setAttribute(BypassCache, parameters[BypassCache] || "false");
+				scriptElement.setAttribute(LiveChatWidgetHideMinimizeButton, parameters[LiveChatWidgetHideMinimizeButton] || "false");
+                scriptElement.setAttribute(EnableNewLine, parameters[EnableNewLine] || "default");
+                scriptElement.setAttribute(EnableMarkdown, parameters[EnableMarkdown] || "default");
+                
+				
+				if(parameters[LiveChatWidgetEnableCustomCloseButtonText])
+                {
+                    scriptElement.setAttribute(LiveChatWidgetEnableCustomCloseButtonText, parameters[LiveChatWidgetEnableCustomCloseButtonText]);
+                }
+				
+				if(parameters[SuggestedActionLayout])
+				{
+				    scriptElement.setAttribute(SuggestedActionLayout, parameters[SuggestedActionLayout]);
+				}
+
+                if(parameters[WidgetFontFamily])
+                {
+                    scriptElement.setAttribute(WidgetFontFamily, parameters[WidgetFontFamily]);
+                }
+                if (parameters[WidgetThemeColor])
+                {
+                    scriptElement.setAttribute(WidgetThemeColor, decodeURIComponent(parameters[WidgetThemeColor]));
+                }
+                document.getElementsByTagName("body")[0].appendChild(scriptElement);
+            }
+
+            function parseSearchParameters(searchUrl) {
+                let parameters = {};
+                if(!searchUrl) return parameters;
+                let searchPart = searchUrl.substr(1);
+                searchPart.split('&').forEach(function(param) {
+                    let paramArr = param.split('=');
+                    if(paramArr && paramArr[0]){
+                        parameters[paramArr[0]] = paramArr[1];
+                    }
+                });
+                return parameters;
+            }
+
+        (function() {
+            let parameters = parseSearchParameters(window.location.search);
+            attachBootScript(parameters);
+            if(parameters[IsPopOutMode]){
+                window.addEventListener("lcw:ready", function handleLivechatReadyEvent() {
+                    var link = document.createElement('link');
+                    link.type = BrowserIconType;
+                    link.rel = BrowserIconRel;
+                    link.href = Microsoft.Omnichannel.LiveChatWidget.Loader.liveChatConfig.chatButtonIconUrl ? Microsoft.Omnichannel.LiveChatWidget.Loader.liveChatConfig.chatButtonIconUrl : " ";
+                    document.getElementsByTagName('head')[0].appendChild(link);
+                    document.title = Microsoft.Omnichannel.LiveChatWidget.Loader.liveChatConfig.chatButtonTitle;
+                    document.documentElement.lang = (Microsoft.Omnichannel.LiveChatWidget.Loader.liveChatConfig.chatWidgetLocale).split("-")[0];
+                });
+                document.addEventListener('contextmenu', function(event){ event.preventDefault(); });
+                }
+            }
+        )();
+        </script><script id="Microsoft_Omnichannel_LCWidget" src="./LiveChatBootstrapper.js.download" data-app-id="81ee3835-bcf7-4c4b-aa55-b55caed43d0e" data-org-id="5e6eb5b2-fe57-4b0c-a55d-392d0141c62e" data-org-url="https://byupathway-crm.omnichannelengagementhub.com" hostname="www.byupathway.org" data-open-in-window="undefined" is-popout-mode="false" is-custom-popout-mode="false" data-disable-telemetry="false" data-hide-chat-button="false" data-render-mobile="false" data-lcw-version="prod" data-enable-lcw-autofill="false" data-bypass-cache="false" data-hide-minimize-button="false" data-enable-newline="default" data-enable-markdown="default"></script>
+    
+
+<div id="oclcw-arialive-region" class="oclcw-visually-hidden" aria-live="assertive" role="alert">Live chat is available</div><div id="MSLiveChatWidget" role="navigation"><div class="chat-root-react" id="chatRootReact" dir="ltr"><div id="chat"><div id="oclw-incomingproactivechat" class="oclcw-incomingproactivechat-page-container" role="region" aria-label="live chat"><div class="oclcw-ipcp-banner" aria-label="Welcome toLive chat support!" style="background-color: rgb(53, 135, 23);"><span role="button" tabindex="0" class="oclcw-ipcp-close" aria-label="Close"></span><span class="oclcw-ipcp-banner-text"><p class="oclcw-ipcp-banner-text-row-1">Welcome to</p><p class="oclcw-ipcp-banner-text-row-2">Live chat support!</p></span></div><span class="oclcw-ipcp-welcomemessage-text"> Join this chat and type "Unofficial Transcript Evaluation" to see how many of your credits will transfer! </span><div id="oclcw-ipcp-incomingproactivechat-accept-button" class="oclcw-ipcp-accept-button" style="background-color: rgb(53, 135, 23);"><span role="button" tabindex="0" class="oclcw-ipcp-accept-button-text">Chat Now</span></div></div></div></div></div></body></html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<body>
+    <h1>Omnichannel chat widget any text you want</h1>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <script id="Microsoft_Omnichannel_LCWidget" src="https://oc-cdn-ocprod.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js" data-app-id="81ee3835-bcf7-4c4b-aa55-b55caed43d0e" data-lcw-version="prod" data-org-id="5e6eb5b2-fe57-4b0c-a55d-392d0141c62e" data-org-url="https://byupathway-crm.omnichannelengagementhub.com"
+    data-font-family-override='Roboto Slab'
+    data-color-override="#FFC328"></script>
+
+    <!-- Code to show proactive chat invite after visitor has spend given time on the webpage -->
+    <script id="Proactivechattrigger">
+        // Wait for Chat widget to load completely
+        window.addEventListener("lcw:ready", function handleLivechatReadyEvent(){
+            var timeToWaitBeforeOfferingProactiveChatInMilliseconds = 5000;//time to wait before Offering proactive chat to webpage visitor
+            // Setting context variables
+            Microsoft.Omnichannel.LiveChatWidget.SDK.setContextProvider(function contextProvider(){
+                return {
+                    'Proactive Chat':{'value':'True','isDisplayable':true},
+                    'Time On Page':{'value': timeToWaitBeforeOfferingProactiveChatInMilliseconds ,'isDisplayable':true},
+                    'Page URL':{'value': window.location.href,'isDisplayable':true},
+                };
+            });
+            
+            //Display proactive chat invite after 'timeToWaitBeforeOfferingProactiveChatInMilliseconds' milliseconds
+            setTimeout(function(){
+                Microsoft.Omnichannel.LiveChatWidget.SDK.startProactiveChat({message: "Type \"Unofficial Transcript Evaluation\" in the chat to find out how many credits will transfer!"}, false)
+            },timeToWaitBeforeOfferingProactiveChatInMilliseconds);
+        });
+    </script>
+
+</body>

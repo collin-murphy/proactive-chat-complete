@@ -1,0 +1,1114 @@
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var Microsoft;
+(function (Microsoft) {
+    var Omnichannel;
+    (function (Omnichannel) {
+        var LiveChatWidget;
+        (function (LiveChatWidget) {
+            var BootstrapperConstants = (function () {
+                function BootstrapperConstants() {
+                }
+                BootstrapperConstants.Script = "script";
+                BootstrapperConstants.Scripts = "/scripts/";
+                BootstrapperConstants.WebChatVersionScripts = "/WebChatControl/scripts/";
+                BootstrapperConstants.Lib = "/lib/";
+                BootstrapperConstants.Head = "head";
+                BootstrapperConstants.Body = "body";
+                BootstrapperConstants.Meta = "meta";
+                BootstrapperConstants.Viewport = "viewport";
+                BootstrapperConstants.ViewportMetaContent = "width=device-width, initial-scale=1.0, maximum-scale=1";
+                BootstrapperConstants.HostName = "hostname";
+                BootstrapperConstants.SRC = "src";
+                BootstrapperConstants.ID = "id";
+                BootstrapperConstants.Html = "html";
+                BootstrapperConstants.Iframe = "iframe";
+                BootstrapperConstants.ALLOW = "allow";
+                BootstrapperConstants.AllowFullScreen = "allowfullscreen";
+                BootstrapperConstants.WebKitAllowFullScreen = "webkitallowfullscreen";
+                BootstrapperConstants.MozillaAllowFullScreen = "mozallowfullscreen";
+                BootstrapperConstants.DataLcwVersion = "data-lcw-version";
+                BootstrapperConstants.ScriptSelector = "script#";
+                BootstrapperConstants.MicrosoftOmnichannelLCWidget = "Microsoft_Omnichannel_LCWidget";
+                BootstrapperConstants.JavascriptFlag = "text/javascript";
+                BootstrapperConstants.InitializerScriptDownloadTriggeredFlag = "isOmniChannelBootstrapperWebChatDownloadTriggered";
+                BootstrapperConstants.InitializerScriptPath = "LiveChatWidgetScripts.min.js";
+                BootstrapperConstants.LibsScriptPath = "LiveChatWidgetLibs.min.js";
+                BootstrapperConstants.MicrosoftOmnichannelLCWidgetChatIframePageId = "Microsoft_Omnichannel_LCWidget_Chat_Iframe_Window";
+                BootstrapperConstants.MicrosoftOmnichannelLCWidgetChatIframePageStyleId = "Microsoft_Omnichannel_LCWidget_Chat_Iframe_Style";
+                BootstrapperConstants.AllowValues = "microphone *; camera *; geolocation *; autoplay;";
+                BootstrapperConstants.DataAppId = "data-app-id";
+                BootstrapperConstants.DataOrgUrl = "data-org-url";
+                BootstrapperConstants.DataOrgId = "data-org-id";
+                BootstrapperConstants.ReconnectId = "oc.reconnectid";
+                BootstrapperConstants.DisableTelemetry = "data-disable-telemetry";
+                BootstrapperConstants.OpenChatInPopOutWindow = "data-open-in-window";
+                BootstrapperConstants.SuggestedActionLayout = "data-suggested-action-layout";
+                BootstrapperConstants.HideMinimizeButton = "data-hide-minimize-button";
+                BootstrapperConstants.EnableCustomCloseButtonText = "data-custom-close-button-text";
+                BootstrapperConstants.URLDelimiter = "&";
+                BootstrapperConstants.EndURLSeparator = "?";
+                BootstrapperConstants.ChatHTMLPath = "/htmls/chat.html";
+                BootstrapperConstants.Equal = "=";
+                BootstrapperConstants.Class = "class";
+                BootstrapperConstants.Style = "style";
+                BootstrapperConstants.Link = "link";
+                BootstrapperConstants.Href = "href";
+                BootstrapperConstants.Rel = "rel";
+                BootstrapperConstants.StyleSheet = "stylesheet";
+                BootstrapperConstants.Type = "type";
+                BootstrapperConstants.TextCss = "text/css";
+                BootstrapperConstants.Title = "title";
+                BootstrapperConstants.LiveChatWidgetHideChatButton = "data-hide-chat-button";
+                BootstrapperConstants.RenderOnMobileDevice = "data-render-mobile";
+                BootstrapperConstants.WidgetFontFamily = "data-font-family-override";
+                BootstrapperConstants.WidgetThemeColor = "data-color-override";
+                BootstrapperConstants.SDK = "SDK";
+                BootstrapperConstants.Return = "return";
+                BootstrapperConstants.SPACE = " ";
+                BootstrapperConstants.Microsoft = "Microsoft";
+                BootstrapperConstants.Dynamic365 = "Dynamic365";
+                BootstrapperConstants.Portal = "Portal";
+                BootstrapperConstants.User = "User";
+                BootstrapperConstants.ScriptBootstrapperPath = "scripts/LiveChatBootstrapper.js";
+                BootstrapperConstants.FrameStyleCssPath = "WebChatControl/styles/LiveChatWidgetFrame.css";
+                BootstrapperConstants.FrameAutofillStyleCssPath = "WebChatControl/styles/LCWAutofillFrame.min.css";
+                BootstrapperConstants.EnableAutofill = "data-enable-lcw-autofill";
+                BootstrapperConstants.BypassCache = "data-bypass-cache";
+                BootstrapperConstants.PopoutTarget = "Omnichannel Chat";
+                BootstrapperConstants.PopoutTab = "popOutTab";
+                BootstrapperConstants.Undefined = 'undefined';
+                BootstrapperConstants.ContactId = "contactId";
+                BootstrapperConstants.EnableNewLineMarkdownSupport = "data-enable-newline";
+                BootstrapperConstants.EnableMakrdownMessageFormatting = "data-enable-markdown";
+                return BootstrapperConstants;
+            }());
+            LiveChatWidget.BootstrapperConstants = BootstrapperConstants;
+            var StyleConstants = (function () {
+                function StyleConstants() {
+                }
+                StyleConstants.Transparent = "transparent";
+                StyleConstants.BackgroundColor = "background-color";
+                StyleConstants.FrameBorder = "frameBorder";
+                StyleConstants.AllowTransparency = "allowTransparency";
+                StyleConstants.BorderWidth = "border-width";
+                StyleConstants.ZIndex = "z-index";
+                StyleConstants.Position = "position";
+                StyleConstants.Right = "right";
+                StyleConstants.Bottom = "bottom";
+                StyleConstants.None = "none";
+                return StyleConstants;
+            }());
+            LiveChatWidget.StyleConstants = StyleConstants;
+            var DefaultCssValues = (function () {
+                function DefaultCssValues() {
+                }
+                DefaultCssValues.FrameBorderWidth = "0px";
+                DefaultCssValues.AllowTransparency = true;
+                DefaultCssValues.IFramePosition = "fixed";
+                DefaultCssValues.IFrameBackgroundColor = "transparent";
+                DefaultCssValues.IFrameZIndex = "999999";
+                return DefaultCssValues;
+            }());
+            LiveChatWidget.DefaultCssValues = DefaultCssValues;
+            var EventConstants = (function () {
+                function EventConstants() {
+                }
+                EventConstants.message = "message";
+                EventConstants.keydown = "keydown";
+                EventConstants.setContextProvider = "setContextProvider";
+                EventConstants.getContextProvider = "getContextProvider";
+                EventConstants.removeContextProvider = "removeContextProvider";
+                EventConstants.setAuthTokenProvider = "setAuthTokenProvider";
+                EventConstants.getAuthTokenProvider = "getAuthTokenProvider";
+                EventConstants.removeAuthTokenProvider = "removeAuthTokenProvider";
+                EventConstants.getContactInfoRequest = "getContactInfoRequest";
+                EventConstants.getContactInfoResponse = "getContactInfoResponse";
+                EventConstants.LcwReady = "lcw:ready";
+                EventConstants.getAgentAvailabilityFinished = "lcw:getAgentAvailability";
+                EventConstants.LcwStartChat = "lcw:startChat";
+                EventConstants.LcwCloseChat = "lcw:closeChat";
+                EventConstants.lcwMinimizeChat = "lcw:onMinimize";
+                EventConstants.lcwOnMaximize = "lcw:onMaximize";
+                EventConstants.lcwOnClose = "lcw:onClose";
+                EventConstants.lcwOnPopoutClose = "lcw:onPopoutClose";
+                EventConstants.lcwOnMessageReceived = "lcw:onMessageReceived";
+                EventConstants.lcwOnPopoutMessageReceived = "lcw:onPopoutMessageReceived";
+                EventConstants.lcwOnMessageSent = "lcw:onMessageSent";
+                EventConstants.lcwOnPopoutMessageSent = "lcw:onPopoutMessageSent";
+                EventConstants.LcwThreadUpdate = "lcw:threadUpdate";
+                EventConstants.LcwChatQueued = "lcw:chatQueued";
+                EventConstants.LcwChatRetrieved = "lcw:chatRetrieved";
+                EventConstants.LcwError = "lcw:error";
+                EventConstants.startChat = "startChat";
+                EventConstants.startPopoutChat = "startPopoutChat";
+                EventConstants.startPopoutChatResponse = "startPopoutChatResponse";
+                EventConstants.closePopoutChatMessage = "closePopoutChatMessage";
+                EventConstants.closeChat = "closeChat";
+                EventConstants.getAgentAvailability = "getAgentAvailability";
+                EventConstants.startProactiveChat = "startProactiveChat";
+                EventConstants.CustomEvent = "CustomEvent";
+                EventConstants.LcwChangeTitle = "changeTitle";
+                EventConstants.audioEnded = "ended";
+                EventConstants.audioPlayError = "error";
+                EventConstants.LogTelemetry = "logTelemetry";
+                return EventConstants;
+            }());
+            LiveChatWidget.EventConstants = EventConstants;
+            var IFrameBootstrapperValues = (function () {
+                function IFrameBootstrapperValues() {
+                }
+                IFrameBootstrapperValues.resizeMSLcwIframe = "resizeMSLcwIframe";
+                IFrameBootstrapperValues.authTokenRequest = "authTokenRequest";
+                IFrameBootstrapperValues.authTokenResponse = "authTokenResponse";
+                IFrameBootstrapperValues.initContextParamsRequest = "initContextParamsRequest";
+                IFrameBootstrapperValues.initContextParamsResponse = "initContextParamsResponse";
+                IFrameBootstrapperValues.portalContactIdRequest = "portalContactIdRequest";
+                IFrameBootstrapperValues.portalContactIdResponse = "portalContactIdResponse";
+                IFrameBootstrapperValues.closePopoutChatMessage = "closePopoutChatMessage";
+                IFrameBootstrapperValues.removeKeyboardEventHandler = "removeKeyboardEventHandler";
+                IFrameBootstrapperValues.repositionMSLcwIframe = "repositionMSLcwIframe";
+                IFrameBootstrapperValues.webChatPanel = "web_chat_panel";
+                IFrameBootstrapperValues.ocAutofillFrame = "oc_autofill_iframe";
+                IFrameBootstrapperValues.bottomLeft = "BottomLeft";
+                IFrameBootstrapperValues.bottomRight = "BottomRight";
+                IFrameBootstrapperValues.hideIframe = "hide_iframe";
+                IFrameBootstrapperValues.proactiveChatPanel = "proactive_chat_panel";
+                IFrameBootstrapperValues.startChatButton = "start_chat_button";
+                IFrameBootstrapperValues.defaultClassName = [IFrameBootstrapperValues.webChatPanel, IFrameBootstrapperValues.hideIframe];
+                IFrameBootstrapperValues.handleControlSlash = "handleControlSlash";
+                IFrameBootstrapperValues.KEY_SLASH = 191;
+                IFrameBootstrapperValues.iFrameTitle = "Microsoft Omnichannel Live Chat Widget";
+                IFrameBootstrapperValues.inAppClassName = "inApp";
+                IFrameBootstrapperValues.redirectPageRequest = "redirectPageRequest";
+                return IFrameBootstrapperValues;
+            }());
+            LiveChatWidget.IFrameBootstrapperValues = IFrameBootstrapperValues;
+            var BootstrapperTelemetryConstants = (function () {
+                function BootstrapperTelemetryConstants() {
+                }
+                BootstrapperTelemetryConstants.IframeEventListenerError = "IframeEventListenerError";
+                BootstrapperTelemetryConstants.AuthClientMethodException = "AuthClientMethodException";
+                BootstrapperTelemetryConstants.StartChatMethodException = "StartChatMethodException";
+                BootstrapperTelemetryConstants.CloseChatMethodException = "CloseChatMethodException";
+                BootstrapperTelemetryConstants.StartProactiveChatMethodException = "StartProactiveChatMethodException";
+                BootstrapperTelemetryConstants.SetContextProviderMethodException = "SetContextProviderMethodException";
+                BootstrapperTelemetryConstants.SetAuthProviderMethodException = "SetAuthProviderMethodException";
+                BootstrapperTelemetryConstants.RemoveContextProviderMethodException = "RemoveContextProviderMethodException";
+                BootstrapperTelemetryConstants.RemoveAuthTokenProviderMethodException = "RemoveAuthTokenProviderMethodException";
+                BootstrapperTelemetryConstants.GetAgentAvailability = "GetAgentAvailability";
+                return BootstrapperTelemetryConstants;
+            }());
+            LiveChatWidget.BootstrapperTelemetryConstants = BootstrapperTelemetryConstants;
+            var BootstrapperLogLevel;
+            (function (BootstrapperLogLevel) {
+                BootstrapperLogLevel["INFO"] = "INFO";
+                BootstrapperLogLevel["DEBUG"] = "DEBUG";
+                BootstrapperLogLevel["WARN"] = "WARN";
+                BootstrapperLogLevel["ERROR"] = "ERROR";
+            })(BootstrapperLogLevel = LiveChatWidget.BootstrapperLogLevel || (LiveChatWidget.BootstrapperLogLevel = {}));
+        })(LiveChatWidget = Omnichannel.LiveChatWidget || (Omnichannel.LiveChatWidget = {}));
+    })(Omnichannel = Microsoft.Omnichannel || (Microsoft.Omnichannel = {}));
+})(Microsoft || (Microsoft = {}));
+var Microsoft;
+(function (Microsoft) {
+    var Omnichannel;
+    (function (Omnichannel) {
+        var LiveChatWidget;
+        (function (LiveChatWidget) {
+            var _this = this;
+            var ClientSdkDelegation = (function () {
+                function ClientSdkDelegation() {
+                    this.settingUpDelegation();
+                }
+                ClientSdkDelegation.getInstance = function () {
+                    if (!ClientSdkDelegation._instance) {
+                        ClientSdkDelegation._instance = new ClientSdkDelegation();
+                    }
+                    return ClientSdkDelegation._instance;
+                };
+                ClientSdkDelegation.prototype.settingUpDelegation = function () {
+                    if (!LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK]) {
+                        LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK] = {};
+                    }
+                    this.setupStartChatFunc();
+                    this.setupCloseChatFunc();
+                    this.setupStartProactiveChatFunc();
+                    this.initGetContextProviderFunc();
+                    this.setupSetContextProviderFunc();
+                    this.setupRemoveContextProviderFunc();
+                    this.setupGetQueueAvailabilityFunc();
+                    this.setupSetAuthTokenProviderFunc();
+                    this.initGetAuthTokenProviderFunc();
+                    this.setupRemoveAuthTokenProviderFunc();
+                };
+                ClientSdkDelegation.prototype.setupStartChatFunc = function () {
+                    try {
+                        LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK][LiveChatWidget.EventConstants.startChat] = function (options) {
+                            ClientSdkDelegation.startChat(LiveChatWidget.EventConstants.startChat, options);
+                        };
+                    }
+                    catch (e) {
+                        console.error("Failed to setup startChat: ", e);
+                        var message = {
+                            messageName: LiveChatWidget.EventConstants.LogTelemetry,
+                            event: LiveChatWidget.BootstrapperTelemetryConstants.StartChatMethodException,
+                            exceptionDetails: e,
+                            logLevel: LiveChatWidget.BootstrapperLogLevel.ERROR
+                        };
+                        LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                    }
+                };
+                ClientSdkDelegation.prototype.setupCloseChatFunc = function () {
+                    try {
+                        LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK][LiveChatWidget.EventConstants.closeChat] = function () {
+                            var message = {
+                                messageName: LiveChatWidget.EventConstants.closeChat
+                            };
+                            LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                        };
+                    }
+                    catch (e) {
+                        console.error("Failed to setup closeChat: ", e);
+                        var message = {
+                            messageName: LiveChatWidget.EventConstants.LogTelemetry,
+                            event: LiveChatWidget.BootstrapperTelemetryConstants.CloseChatMethodException,
+                            exceptionDetails: e,
+                            logLevel: LiveChatWidget.BootstrapperLogLevel.ERROR
+                        };
+                        LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                    }
+                };
+                ClientSdkDelegation.prototype.setupGetQueueAvailabilityFunc = function () {
+                    try {
+                        LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK][LiveChatWidget.EventConstants.getAgentAvailability] = function () {
+                            var message = {
+                                messageName: LiveChatWidget.EventConstants.getAgentAvailability
+                            };
+                            LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                        };
+                    }
+                    catch (e) {
+                        console.error("Failed to setup get Agent availability: ", e);
+                        var message = {
+                            messageName: LiveChatWidget.EventConstants.LogTelemetry,
+                            event: LiveChatWidget.BootstrapperTelemetryConstants.GetAgentAvailability,
+                            exceptionDetails: e,
+                            logLevel: LiveChatWidget.BootstrapperLogLevel.ERROR
+                        };
+                        LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                    }
+                };
+                ClientSdkDelegation.prototype.setupStartProactiveChatFunc = function () {
+                    try {
+                        LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK][LiveChatWidget.EventConstants.startProactiveChat] = function (notificationConfig, enablePreChat, options) {
+                            if (enablePreChat === void 0) { enablePreChat = null; }
+                            ClientSdkDelegation.startProactiveChat(LiveChatWidget.EventConstants.startProactiveChat, notificationConfig, enablePreChat, options);
+                        };
+                    }
+                    catch (e) {
+                        console.error("Failed to setup proactiveChat: ", e);
+                        var message = {
+                            messageName: LiveChatWidget.EventConstants.LogTelemetry,
+                            event: LiveChatWidget.BootstrapperTelemetryConstants.StartProactiveChatMethodException,
+                            exceptionDetails: e,
+                            logLevel: LiveChatWidget.BootstrapperLogLevel.ERROR
+                        };
+                        LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                    }
+                };
+                ClientSdkDelegation.startChat = function (messageName, options) {
+                    var message = {
+                        messageName: messageName
+                    };
+                    var inNewWindow = false;
+                    if (options != null) {
+                        inNewWindow = options.inNewWindow;
+                        message.inNewWindow = inNewWindow;
+                    }
+                    var shouldOpenInNewWindow = inNewWindow && inNewWindow == true;
+                    if (!shouldOpenInNewWindow) {
+                        LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                        return;
+                    }
+                    if (!LiveChatWidget.LiveChatBootstrapperWebChat.isLCWReady) {
+                        return;
+                    }
+                    var shouldInitPopoutTab = window[LiveChatWidget.BootstrapperConstants.PopoutTab] == null ||
+                        window[LiveChatWidget.BootstrapperConstants.PopoutTab] == undefined;
+                    if (!shouldInitPopoutTab) {
+                        window[LiveChatWidget.BootstrapperConstants.PopoutTab].focus();
+                        return;
+                    }
+                    var popOutTab = window.open('', LiveChatWidget.BootstrapperConstants.PopoutTarget, "location=no");
+                    window[LiveChatWidget.BootstrapperConstants.PopoutTab] = popOutTab;
+                    LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                    window.addEventListener(LiveChatWidget.EventConstants.message, ClientSdkDelegation.popoutMessageHandler);
+                };
+                ClientSdkDelegation.startProactiveChat = function (messageName, notificationConfig, enablePreChat, options) {
+                    if (enablePreChat === void 0) { enablePreChat = null; }
+                    var message = {
+                        messageName: messageName
+                    };
+                    if (notificationConfig) {
+                        message.notificationConfig = notificationConfig;
+                    }
+                    if (enablePreChat) {
+                        message.enablePreChat = enablePreChat;
+                    }
+                    var inNewWindow = false;
+                    if (options != null) {
+                        inNewWindow = options.inNewWindow;
+                        message.inNewWindow = inNewWindow;
+                    }
+                    var shouldOpenInNewWindow = inNewWindow && inNewWindow == true;
+                    if (!shouldOpenInNewWindow) {
+                        LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                        return;
+                    }
+                    if (!LiveChatWidget.LiveChatBootstrapperWebChat.isLCWReady) {
+                        return;
+                    }
+                    var shouldInitPopoutTab = window[LiveChatWidget.BootstrapperConstants.PopoutTab] == null ||
+                        window[LiveChatWidget.BootstrapperConstants.PopoutTab] == undefined;
+                    if (!shouldInitPopoutTab) {
+                        window[LiveChatWidget.BootstrapperConstants.PopoutTab].focus();
+                        return;
+                    }
+                    LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                    window.addEventListener(LiveChatWidget.EventConstants.message, ClientSdkDelegation.popoutMessageHandlerProactiveChat);
+                };
+                ClientSdkDelegation.prototype.setupSetContextProviderFunc = function () {
+                    try {
+                        LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK][LiveChatWidget.EventConstants.setContextProvider] = function (customerFunction) {
+                            var contextVariables = customerFunction();
+                            var message = {
+                                messageName: LiveChatWidget.EventConstants.setContextProvider,
+                                contextVariables: contextVariables
+                            };
+                            LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                            LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK][LiveChatWidget.EventConstants.getContextProvider] = function () { return customerFunction; };
+                        };
+                    }
+                    catch (e) {
+                        console.error("Failed to setup setContextProvider: ", e);
+                        var message = {
+                            messageName: LiveChatWidget.EventConstants.LogTelemetry,
+                            event: LiveChatWidget.BootstrapperTelemetryConstants.SetContextProviderMethodException,
+                            exceptionDetails: e,
+                            logLevel: LiveChatWidget.BootstrapperLogLevel.ERROR
+                        };
+                        LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                    }
+                };
+                ClientSdkDelegation.prototype.setupSetAuthTokenProviderFunc = function () {
+                    try {
+                        LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK][LiveChatWidget.EventConstants.setAuthTokenProvider] = function (customerFunction) {
+                            customerFunction(function (token) { ClientSdkDelegation.jwtToken = token; });
+                            var message = {
+                                messageName: LiveChatWidget.EventConstants.setAuthTokenProvider,
+                                jwtToken: ClientSdkDelegation.jwtToken,
+                            };
+                            LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                            LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK][LiveChatWidget.EventConstants.getAuthTokenProvider] = function () { return customerFunction; };
+                        };
+                    }
+                    catch (e) {
+                        console.error("Failed to setup setAuthTokenProvider: ", e);
+                        var message = {
+                            messageName: LiveChatWidget.EventConstants.LogTelemetry,
+                            event: LiveChatWidget.BootstrapperTelemetryConstants.SetAuthProviderMethodException,
+                            exceptionDetails: e,
+                            logLevel: LiveChatWidget.BootstrapperLogLevel.ERROR
+                        };
+                        LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                    }
+                };
+                ClientSdkDelegation.prototype.setupRemoveContextProviderFunc = function () {
+                    try {
+                        LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK][LiveChatWidget.EventConstants.removeContextProvider] = function () {
+                            var message = {
+                                messageName: LiveChatWidget.EventConstants.removeContextProvider
+                            };
+                            LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                            LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK][LiveChatWidget.EventConstants.getContextProvider] = function () { return null; };
+                        };
+                    }
+                    catch (e) {
+                        console.error("Failed to setup removeContextProvider: ", e);
+                        var message = {
+                            messageName: LiveChatWidget.EventConstants.LogTelemetry,
+                            event: LiveChatWidget.BootstrapperTelemetryConstants.RemoveContextProviderMethodException,
+                            exceptionDetails: e,
+                            logLevel: LiveChatWidget.BootstrapperLogLevel.ERROR
+                        };
+                        LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                    }
+                };
+                ClientSdkDelegation.prototype.setupRemoveAuthTokenProviderFunc = function () {
+                    try {
+                        LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK][LiveChatWidget.EventConstants.removeAuthTokenProvider] = function () {
+                            var message = {
+                                messageName: LiveChatWidget.EventConstants.removeAuthTokenProvider
+                            };
+                            LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                            ClientSdkDelegation.getInstance().initGetAuthTokenProviderFunc();
+                        };
+                    }
+                    catch (e) {
+                        console.error("Failed to setup removeAuthTokenProvider: ", e);
+                        var message = {
+                            messageName: LiveChatWidget.EventConstants.LogTelemetry,
+                            event: LiveChatWidget.BootstrapperTelemetryConstants.RemoveAuthTokenProviderMethodException,
+                            exceptionDetails: e,
+                            logLevel: LiveChatWidget.BootstrapperLogLevel.ERROR
+                        };
+                        LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                    }
+                };
+                ClientSdkDelegation.prototype.initGetContextProviderFunc = function () {
+                    LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK][LiveChatWidget.EventConstants.getContextProvider] = function () { return null; };
+                };
+                ClientSdkDelegation.prototype.initGetAuthTokenProviderFunc = function () {
+                    LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK][LiveChatWidget.EventConstants.getAuthTokenProvider] = function () { return null; };
+                };
+                ClientSdkDelegation.popoutMessageHandler = function (event) { return __awaiter(_this, void 0, void 0, function () {
+                    var popOutTab, popoutTab, authFunc, message, contextProviderFunction, Constants_1, portalContactId;
+                    return __generator(this, function (_a) {
+                        if (!event.data) {
+                            return [2];
+                        }
+                        popOutTab = window[LiveChatWidget.BootstrapperConstants.PopoutTab];
+                        if (event.data.messageName == LiveChatWidget.EventConstants.startPopoutChatResponse) {
+                            popOutTab.moveTo(event.data.payload.left, event.data.payload.top);
+                            popOutTab.resizeTo(event.data.payload.width, event.data.payload.height);
+                            popOutTab.location.href = event.data.payload.popOutUrl;
+                            return [2];
+                        }
+                        if (event.data.messageName == LiveChatWidget.EventConstants.closePopoutChatMessage) {
+                            window.removeEventListener(LiveChatWidget.EventConstants.message, ClientSdkDelegation.popoutMessageHandler);
+                            popoutTab = window[LiveChatWidget.BootstrapperConstants.PopoutTab];
+                            if (popoutTab && !popoutTab.closed) {
+                                popoutTab.close();
+                            }
+                            window[LiveChatWidget.BootstrapperConstants.PopoutTab] = null;
+                            return [2];
+                        }
+                        if (event.data.messageName == LiveChatWidget.IFrameBootstrapperValues.authTokenRequest) {
+                            authFunc = LiveChatWidget.AuthToken.getMethodFromString(event.data.functionFullName);
+                            try {
+                                authFunc(function (token) {
+                                    popOutTab.postMessage({
+                                        messageName: LiveChatWidget.IFrameBootstrapperValues.authTokenResponse,
+                                        authToken: token
+                                    }, '*');
+                                });
+                            }
+                            catch (e) {
+                                message = {
+                                    messageName: LiveChatWidget.EventConstants.LogTelemetry,
+                                    event: LiveChatWidget.BootstrapperTelemetryConstants.AuthClientMethodException,
+                                    exceptionDetails: e,
+                                    logLevel: LiveChatWidget.BootstrapperLogLevel.ERROR
+                                };
+                                LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                            }
+                            return [2];
+                        }
+                        if (event.data.messageName == LiveChatWidget.IFrameBootstrapperValues.initContextParamsRequest) {
+                            contextProviderFunction = LiveChatWidget[LiveChatWidget.BootstrapperConstants.SDK][LiveChatWidget.EventConstants.getContextProvider]();
+                            popOutTab.postMessage({
+                                messageName: LiveChatWidget.IFrameBootstrapperValues.initContextParamsResponse,
+                                payload: {
+                                    contextVariables: contextProviderFunction ? contextProviderFunction() : null,
+                                    isProactiveChat: 0
+                                }
+                            }, '*');
+                            return [2];
+                        }
+                        if (event.data.messageName == LiveChatWidget.IFrameBootstrapperValues.portalContactIdRequest) {
+                            Constants_1 = LiveChatWidget.BootstrapperConstants;
+                            portalContactId = typeof window[Constants_1.Microsoft] != Constants_1.Undefined &&
+                                typeof window[Constants_1.Microsoft][Constants_1.Dynamic365] != Constants_1.Undefined &&
+                                typeof window[Constants_1.Microsoft][Constants_1.Dynamic365][Constants_1.Portal] != Constants_1.Undefined &&
+                                typeof window[Constants_1.Microsoft][Constants_1.Dynamic365][Constants_1.Portal][Constants_1.User] != Constants_1.Undefined &&
+                                (window[Constants_1.Microsoft][Constants_1.Dynamic365][Constants_1.Portal][Constants_1.User][Constants_1.ContactId]).toString();
+                            popOutTab.postMessage({
+                                messageName: LiveChatWidget.IFrameBootstrapperValues.portalContactIdResponse,
+                                portalContactId: portalContactId
+                            }, '*');
+                            return [2];
+                        }
+                        return [2];
+                    });
+                }); };
+                ClientSdkDelegation.popoutMessageHandlerProactiveChat = function (event) { return __awaiter(_this, void 0, void 0, function () {
+                    var popOutTab, popoutTab;
+                    return __generator(this, function (_a) {
+                        if (!event.data) {
+                            return [2];
+                        }
+                        if (event.data.messageName == LiveChatWidget.EventConstants.startPopoutChatResponse) {
+                            popOutTab = window[LiveChatWidget.BootstrapperConstants.PopoutTab];
+                            if (!popOutTab) {
+                                window[LiveChatWidget.BootstrapperConstants.PopoutTab] = window.open('', LiveChatWidget.BootstrapperConstants.PopoutTarget, "location=no");
+                                popOutTab = window[LiveChatWidget.BootstrapperConstants.PopoutTab];
+                            }
+                            popOutTab.moveTo(event.data.payload.left, event.data.payload.top);
+                            popOutTab.resizeTo(event.data.payload.width, event.data.payload.height);
+                            popOutTab.location.href = event.data.payload.popOutUrl;
+                            return [2];
+                        }
+                        if (event.data.messageName == LiveChatWidget.EventConstants.closePopoutChatMessage) {
+                            window.removeEventListener(LiveChatWidget.EventConstants.message, ClientSdkDelegation.popoutMessageHandler);
+                            popoutTab = window[LiveChatWidget.BootstrapperConstants.PopoutTab];
+                            if (popoutTab && !popoutTab.closed) {
+                                popoutTab.close();
+                            }
+                            window[LiveChatWidget.BootstrapperConstants.PopoutTab] = null;
+                            return [2];
+                        }
+                        return [2];
+                    });
+                }); };
+                return ClientSdkDelegation;
+            }());
+            LiveChatWidget.ClientSdkDelegation = ClientSdkDelegation;
+        })(LiveChatWidget = Omnichannel.LiveChatWidget || (Omnichannel.LiveChatWidget = {}));
+    })(Omnichannel = Microsoft.Omnichannel || (Microsoft.Omnichannel = {}));
+})(Microsoft || (Microsoft = {}));
+var Microsoft;
+(function (Microsoft) {
+    var Omnichannel;
+    (function (Omnichannel) {
+        var LiveChatWidget;
+        (function (LiveChatWidget) {
+            var IFrameMessageHandler = (function () {
+                function IFrameMessageHandler() {
+                }
+                IFrameMessageHandler.addIframeEventListener = function () {
+                    var _this = this;
+                    window.addEventListener(LiveChatWidget.EventConstants.message, function (event) {
+                        if (event.data) {
+                            try {
+                                var customEvent;
+                                var data = event.data;
+                                switch (data.messageName) {
+                                    case LiveChatWidget.IFrameBootstrapperValues.resizeMSLcwIframe:
+                                        LiveChatWidget.LiveChatBootstrapperWebChat.resizeMSLcwIframe(data.id, data.className);
+                                        break;
+                                    case LiveChatWidget.IFrameBootstrapperValues.repositionMSLcwIframe:
+                                        LiveChatWidget.LiveChatBootstrapperWebChat.repositionMSLcwIframe(data.id, data.position);
+                                        break;
+                                    case LiveChatWidget.IFrameBootstrapperValues.authTokenRequest:
+                                        LiveChatWidget.AuthToken.onAuthTokenRequest(data.functionFullName);
+                                        break;
+                                    case LiveChatWidget.IFrameBootstrapperValues.initContextParamsRequest:
+                                        IFrameMessageHandler.onInitContextParamsRequest();
+                                        break;
+                                    case LiveChatWidget.IFrameBootstrapperValues.closePopoutChatMessage:
+                                        IFrameMessageHandler.onClosePopOutChatMessage();
+                                    case LiveChatWidget.EventConstants.LcwChangeTitle:
+                                        IFrameMessageHandler.changeDocumentTitle(data.payload);
+                                        break;
+                                    case LiveChatWidget.EventConstants.LcwReady:
+                                        LiveChatWidget.LiveChatBootstrapperWebChat.isLCWReady = true;
+                                        customEvent = LiveChatWidget.LiveChatBootstrapperWebChat.createCustomEvent(data.messageName, data.payload);
+                                        window.dispatchEvent(customEvent);
+                                        break;
+                                    case LiveChatWidget.EventConstants.getAgentAvailabilityFinished:
+                                        customEvent = LiveChatWidget.LiveChatBootstrapperWebChat.createCustomEvent(data.messageName, data.payload);
+                                        window.dispatchEvent(customEvent);
+                                        break;
+                                    case LiveChatWidget.EventConstants.LcwStartChat:
+                                    case LiveChatWidget.EventConstants.LcwCloseChat:
+                                    case LiveChatWidget.EventConstants.LcwThreadUpdate:
+                                    case LiveChatWidget.EventConstants.lcwMinimizeChat:
+                                    case LiveChatWidget.EventConstants.LcwError:
+                                    case LiveChatWidget.EventConstants.lcwOnClose:
+                                    case LiveChatWidget.EventConstants.lcwOnMaximize:
+                                    case LiveChatWidget.EventConstants.lcwOnMessageReceived:
+                                    case LiveChatWidget.EventConstants.lcwOnMessageSent:
+                                    case LiveChatWidget.EventConstants.LcwChatQueued:
+                                    case LiveChatWidget.EventConstants.LcwChatRetrieved:
+                                        customEvent = LiveChatWidget.LiveChatBootstrapperWebChat.createCustomEvent(data.messageName, data.payload);
+                                        window.dispatchEvent(customEvent);
+                                        break;
+                                    case LiveChatWidget.IFrameBootstrapperValues.redirectPageRequest:
+                                        if (!_this.doesSourceMatchOrigin(event)) {
+                                            return;
+                                        }
+                                        var newUrl = _this.sanitizeUrl(data.newUrl);
+                                        window.parent.location.replace(newUrl);
+                                        break;
+                                    case LiveChatWidget.EventConstants.lcwOnPopoutMessageReceived:
+                                        customEvent = LiveChatWidget.LiveChatBootstrapperWebChat.createCustomEvent(LiveChatWidget.EventConstants.lcwOnMessageReceived, data.payload);
+                                        window.parent.dispatchEvent(customEvent);
+                                        break;
+                                    case LiveChatWidget.EventConstants.lcwOnPopoutMessageSent:
+                                        customEvent = LiveChatWidget.LiveChatBootstrapperWebChat.createCustomEvent(LiveChatWidget.EventConstants.lcwOnMessageSent, data.payload);
+                                        window.parent.dispatchEvent(customEvent);
+                                        break;
+                                    case LiveChatWidget.EventConstants.lcwOnPopoutClose:
+                                        customEvent = LiveChatWidget.LiveChatBootstrapperWebChat.createCustomEvent(LiveChatWidget.EventConstants.lcwOnClose, data.payload);
+                                        window.parent.dispatchEvent(customEvent);
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+                            catch (e) {
+                                var message = {
+                                    messageName: LiveChatWidget.EventConstants.LogTelemetry,
+                                    event: LiveChatWidget.BootstrapperTelemetryConstants.IframeEventListenerError,
+                                    exceptionDetails: e,
+                                    logLevel: LiveChatWidget.BootstrapperLogLevel.ERROR
+                                };
+                                LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                            }
+                        }
+                    });
+                    window.addEventListener(LiveChatWidget.EventConstants.LcwReady, function () {
+                        if (window[LiveChatWidget.BootstrapperConstants.Microsoft]
+                            && window[LiveChatWidget.BootstrapperConstants.Microsoft][LiveChatWidget.BootstrapperConstants.Dynamic365]
+                            && window[LiveChatWidget.BootstrapperConstants.Microsoft][LiveChatWidget.BootstrapperConstants.Dynamic365][LiveChatWidget.BootstrapperConstants.Portal]
+                            && window[LiveChatWidget.BootstrapperConstants.Microsoft][LiveChatWidget.BootstrapperConstants.Dynamic365][LiveChatWidget.BootstrapperConstants.Portal][LiveChatWidget.BootstrapperConstants.User]) {
+                            var message = {
+                                messageName: LiveChatWidget.EventConstants.getContactInfoResponse,
+                                contactInfo: window[LiveChatWidget.BootstrapperConstants.Microsoft][LiveChatWidget.BootstrapperConstants.Dynamic365][LiveChatWidget.BootstrapperConstants.Portal][LiveChatWidget.BootstrapperConstants.User]
+                            };
+                            LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                        }
+                    });
+                };
+                IFrameMessageHandler.changeDocumentTitle = function (messageCount) {
+                    var currentTitle = document.title ? document.title : "";
+                    var title = !!messageCount && messageCount > 0 ? "(" + messageCount + ") " + currentTitle.replace(/^\(\d*\)/, "") : currentTitle.replace(/^\(\d*\)/, "");
+                    window.document.title = title;
+                };
+                IFrameMessageHandler.onInitContextParamsRequest = function () {
+                    var iframeElement = document
+                        .getElementById(LiveChatWidget.BootstrapperConstants.MicrosoftOmnichannelLCWidgetChatIframePageId);
+                    if (iframeElement) {
+                        iframeElement
+                            .contentWindow
+                            .postMessage({
+                            messageName: LiveChatWidget.IFrameBootstrapperValues.initContextParamsResponse
+                        }, '*');
+                    }
+                };
+                IFrameMessageHandler.onClosePopOutChatMessage = function () {
+                    var iframeElement = document
+                        .getElementById(LiveChatWidget.BootstrapperConstants.MicrosoftOmnichannelLCWidgetChatIframePageId);
+                    if (iframeElement) {
+                        iframeElement
+                            .contentWindow
+                            .postMessage({
+                            messageName: LiveChatWidget.IFrameBootstrapperValues.closePopoutChatMessage
+                        }, '*');
+                    }
+                };
+                IFrameMessageHandler.doesSourceMatchOrigin = function (event) {
+                    var bootScript = document.querySelector(LiveChatWidget.BootstrapperConstants.ScriptSelector + LiveChatWidget.BootstrapperConstants.MicrosoftOmnichannelLCWidget);
+                    var source = bootScript.getAttribute(LiveChatWidget.BootstrapperConstants.SRC).replace("/livechatwidget/scripts/LiveChatBootstrapper.js", "");
+                    return event.origin === source;
+                };
+                IFrameMessageHandler.sanitizeUrl = function (url) {
+                    var urlObject = new URL(url);
+                    return urlObject.origin + urlObject.pathname;
+                };
+                return IFrameMessageHandler;
+            }());
+            LiveChatWidget.IFrameMessageHandler = IFrameMessageHandler;
+        })(LiveChatWidget = Omnichannel.LiveChatWidget || (Omnichannel.LiveChatWidget = {}));
+    })(Omnichannel = Microsoft.Omnichannel || (Microsoft.Omnichannel = {}));
+})(Microsoft || (Microsoft = {}));
+var Microsoft;
+(function (Microsoft) {
+    var Omnichannel;
+    (function (Omnichannel) {
+        var LiveChatWidget;
+        (function (LiveChatWidget) {
+            var AuthToken = (function () {
+                function AuthToken() {
+                }
+                AuthToken.onAuthTokenRequest = function (functionName) {
+                    var authFunc = AuthToken.getMethodFromString(functionName);
+                    try {
+                        authFunc(function (token) {
+                            var iframeElement = document
+                                .getElementById(LiveChatWidget.BootstrapperConstants.MicrosoftOmnichannelLCWidgetChatIframePageId);
+                            if (iframeElement != null && iframeElement != undefined) {
+                                iframeElement
+                                    .contentWindow
+                                    .postMessage({
+                                    messageName: LiveChatWidget.IFrameBootstrapperValues.authTokenResponse,
+                                    authToken: token
+                                }, '*');
+                            }
+                        });
+                    }
+                    catch (e) {
+                        var message = {
+                            messageName: LiveChatWidget.EventConstants.LogTelemetry,
+                            event: LiveChatWidget.BootstrapperTelemetryConstants.AuthClientMethodException,
+                            exceptionDetails: e,
+                            logLevel: LiveChatWidget.BootstrapperLogLevel.ERROR
+                        };
+                        LiveChatWidget.LiveChatBootstrapperWebChat.postIframeMessage(message);
+                        var errorEvent = LiveChatWidget.LiveChatBootstrapperWebChat.createCustomEvent(LiveChatWidget.EventConstants.LcwError, e);
+                        window.dispatchEvent(errorEvent);
+                    }
+                };
+                AuthToken.getMethodFromString = function (methodString) {
+                    if (methodString) {
+                        var scope = window;
+                        var scopeSplit = methodString.split('.');
+                        for (var i = 0; i < scopeSplit.length - 1; i++) {
+                            scope = scope[scopeSplit[i]];
+                            if (!scope) {
+                                return;
+                            }
+                        }
+                        var theMethodName = scopeSplit[scopeSplit.length - 1];
+                        return scope[theMethodName];
+                    }
+                };
+                return AuthToken;
+            }());
+            LiveChatWidget.AuthToken = AuthToken;
+        })(LiveChatWidget = Omnichannel.LiveChatWidget || (Omnichannel.LiveChatWidget = {}));
+    })(Omnichannel = Microsoft.Omnichannel || (Microsoft.Omnichannel = {}));
+})(Microsoft || (Microsoft = {}));
+var Microsoft;
+(function (Microsoft) {
+    var Omnichannel;
+    (function (Omnichannel) {
+        var LiveChatWidget;
+        (function (LiveChatWidget) {
+            var LiveChatBootstrapperWebChat = (function () {
+                function LiveChatBootstrapperWebChat() {
+                }
+                LiveChatBootstrapperWebChat.prototype.loadJSResource = function (path, onload, onerror) {
+                    var scriptResource = document.createElement(LiveChatWidget.BootstrapperConstants.Script);
+                    scriptResource.src = path;
+                    scriptResource.type = LiveChatWidget.BootstrapperConstants.JavascriptFlag;
+                    scriptResource.onload = onload;
+                    scriptResource.onerror = onerror;
+                    try {
+                        document.getElementsByTagName(LiveChatWidget.BootstrapperConstants.Head)[0].appendChild(scriptResource);
+                    }
+                    catch (_a) {
+                        document.getElementsByTagName(LiveChatWidget.BootstrapperConstants.Body)[0].appendChild(scriptResource);
+                    }
+                };
+                LiveChatBootstrapperWebChat.attachLcwIframeStyle = function (scriptNode) {
+                    var styleElement = document.createElement(LiveChatWidget.BootstrapperConstants.Link);
+                    styleElement[LiveChatWidget.BootstrapperConstants.ID] = LiveChatWidget.BootstrapperConstants.MicrosoftOmnichannelLCWidgetChatIframePageStyleId;
+                    styleElement[LiveChatWidget.BootstrapperConstants.Type] = LiveChatWidget.BootstrapperConstants.TextCss;
+                    styleElement[LiveChatWidget.BootstrapperConstants.Rel] = LiveChatWidget.BootstrapperConstants.StyleSheet;
+                    var bootScript = document.querySelector("script#" + LiveChatWidget.BootstrapperConstants.MicrosoftOmnichannelLCWidget);
+                    var enableAutofill = bootScript.getAttribute(LiveChatWidget.BootstrapperConstants.EnableAutofill);
+                    if (!enableAutofill || enableAutofill.trim().length === 0) {
+                        enableAutofill = "false";
+                    }
+                    var isAutofill = enableAutofill.trim().toLowerCase() === "true";
+                    var framePath = isAutofill ? LiveChatWidget.BootstrapperConstants.FrameAutofillStyleCssPath : LiveChatWidget.BootstrapperConstants.FrameStyleCssPath;
+                    styleElement[LiveChatWidget.BootstrapperConstants.Href] = scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.SRC).replace(LiveChatWidget.BootstrapperConstants.ScriptBootstrapperPath, framePath);
+                    var htmlElement = document.getElementsByTagName(LiveChatWidget.BootstrapperConstants.Html)[0];
+                    var headElements = document.getElementsByTagName(LiveChatWidget.BootstrapperConstants.Head);
+                    if (!headElements || !headElements[0]) {
+                        htmlElement.appendChild(document.createElement(LiveChatWidget.BootstrapperConstants.Head));
+                    }
+                    var headElement = document.getElementsByTagName(LiveChatWidget.BootstrapperConstants.Head)[0];
+                    headElement.appendChild(styleElement);
+                };
+                LiveChatBootstrapperWebChat.attachLcwIframe = function (scriptNode) {
+                    var iframeElement = document.createElement(LiveChatWidget.BootstrapperConstants.Iframe);
+                    var servicePageSrc = scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.SRC).replace("scripts/LiveChatBootstrapper.js", "WebChatControl");
+                    servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.ChatHTMLPath, LiveChatWidget.BootstrapperConstants.EndURLSeparator, LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.ID, LiveChatWidget.BootstrapperConstants.Equal, this.convertNullToString(scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.ID)), LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.DataAppId, LiveChatWidget.BootstrapperConstants.Equal, this.convertNullToString(scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.DataAppId)), LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.DataOrgId, LiveChatWidget.BootstrapperConstants.Equal, this.convertNullToString(scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.DataOrgId)), LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.DataOrgUrl, LiveChatWidget.BootstrapperConstants.Equal, this.convertNullToString(scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.DataOrgUrl)), LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.HostName, LiveChatWidget.BootstrapperConstants.Equal, window.location.host);
+                    var urlParameterStrings = window.top.location.search.substring(1);
+                    if (!LiveChatBootstrapperWebChat.isNullOrEmptyString(urlParameterStrings)) {
+                        var urlParameterObject = LiveChatBootstrapperWebChat.getQueryParameters(urlParameterStrings);
+                        if (urlParameterObject && !LiveChatBootstrapperWebChat.isNullOrEmptyString(urlParameterObject[LiveChatWidget.BootstrapperConstants.ReconnectId])) {
+                            servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.ReconnectId, LiveChatWidget.BootstrapperConstants.Equal, urlParameterObject[LiveChatWidget.BootstrapperConstants.ReconnectId]);
+                        }
+                    }
+                    if (scriptNode.hasAttribute(LiveChatWidget.BootstrapperConstants.DisableTelemetry)) {
+                        servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.DisableTelemetry, LiveChatWidget.BootstrapperConstants.Equal, scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.DisableTelemetry));
+                    }
+                    if (scriptNode.hasAttribute(LiveChatWidget.BootstrapperConstants.LiveChatWidgetHideChatButton)) {
+                        servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.LiveChatWidgetHideChatButton, LiveChatWidget.BootstrapperConstants.Equal, scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.LiveChatWidgetHideChatButton));
+                    }
+                    if (scriptNode.hasAttribute(LiveChatWidget.BootstrapperConstants.OpenChatInPopOutWindow)) {
+                        servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.OpenChatInPopOutWindow, LiveChatWidget.BootstrapperConstants.Equal, scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.OpenChatInPopOutWindow));
+                    }
+                    if (scriptNode.hasAttribute(LiveChatWidget.BootstrapperConstants.EnableNewLineMarkdownSupport)) {
+                        servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.EnableNewLineMarkdownSupport, LiveChatWidget.BootstrapperConstants.Equal, scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.EnableNewLineMarkdownSupport));
+                    }
+                    if (scriptNode.hasAttribute(LiveChatWidget.BootstrapperConstants.EnableMakrdownMessageFormatting)) {
+                        servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.EnableMakrdownMessageFormatting, LiveChatWidget.BootstrapperConstants.Equal, scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.EnableMakrdownMessageFormatting));
+                    }
+                    if (scriptNode.hasAttribute(LiveChatWidget.BootstrapperConstants.SuggestedActionLayout)) {
+                        servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.SuggestedActionLayout, LiveChatWidget.BootstrapperConstants.Equal, scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.SuggestedActionLayout));
+                    }
+                    if (scriptNode.hasAttribute(LiveChatWidget.BootstrapperConstants.DataLcwVersion)) {
+                        servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.DataLcwVersion, LiveChatWidget.BootstrapperConstants.Equal, scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.DataLcwVersion));
+                    }
+                    if (scriptNode.hasAttribute(LiveChatWidget.BootstrapperConstants.HideMinimizeButton)) {
+                        servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.HideMinimizeButton, LiveChatWidget.BootstrapperConstants.Equal, scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.HideMinimizeButton));
+                    }
+                    if (scriptNode.hasAttribute(LiveChatWidget.BootstrapperConstants.EnableCustomCloseButtonText)) {
+                        servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.EnableCustomCloseButtonText, LiveChatWidget.BootstrapperConstants.Equal, scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.EnableCustomCloseButtonText));
+                    }
+                    if (scriptNode.hasAttribute(LiveChatWidget.BootstrapperConstants.EnableAutofill)) {
+                        servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.EnableAutofill, LiveChatWidget.BootstrapperConstants.Equal, scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.EnableAutofill));
+                    }
+                    if (scriptNode.hasAttribute(LiveChatWidget.BootstrapperConstants.BypassCache)) {
+                        servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.BypassCache, LiveChatWidget.BootstrapperConstants.Equal, scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.BypassCache));
+                    }
+                    if (scriptNode.hasAttribute(LiveChatWidget.BootstrapperConstants.WidgetFontFamily)) {
+                        servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.WidgetFontFamily, LiveChatWidget.BootstrapperConstants.Equal, scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.WidgetFontFamily));
+                    }
+                    if (scriptNode.hasAttribute(LiveChatWidget.BootstrapperConstants.RenderOnMobileDevice)) {
+                        servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.RenderOnMobileDevice, LiveChatWidget.BootstrapperConstants.Equal, scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.RenderOnMobileDevice));
+                        if (scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.RenderOnMobileDevice.trim().toLowerCase()) === "true") {
+                            LiveChatBootstrapperWebChat.renderOnMobileDevice = true;
+                        }
+                    }
+                    if (scriptNode.hasAttribute(LiveChatWidget.BootstrapperConstants.WidgetThemeColor)) {
+                        var widgetColor = scriptNode.getAttribute(LiveChatWidget.BootstrapperConstants.WidgetThemeColor);
+                        servicePageSrc = servicePageSrc.concat(LiveChatWidget.BootstrapperConstants.URLDelimiter, LiveChatWidget.BootstrapperConstants.WidgetThemeColor, LiveChatWidget.BootstrapperConstants.Equal, encodeURIComponent(widgetColor));
+                    }
+                    LiveChatBootstrapperWebChat.iframePosition = LiveChatWidget.IFrameBootstrapperValues.bottomRight;
+                    iframeElement[LiveChatWidget.BootstrapperConstants.SRC] = servicePageSrc;
+                    iframeElement[LiveChatWidget.BootstrapperConstants.ID] = LiveChatWidget.BootstrapperConstants.MicrosoftOmnichannelLCWidgetChatIframePageId;
+                    (_a = iframeElement.classList).add.apply(_a, LiveChatWidget.IFrameBootstrapperValues.defaultClassName);
+                    iframeElement[LiveChatWidget.BootstrapperConstants.Title] = "";
+                    iframeElement[LiveChatWidget.StyleConstants.BackgroundColor] = LiveChatWidget.DefaultCssValues.IFrameBackgroundColor;
+                    iframeElement[LiveChatWidget.StyleConstants.FrameBorder] = LiveChatWidget.DefaultCssValues.FrameBorderWidth;
+                    iframeElement[LiveChatWidget.StyleConstants.AllowTransparency] = true;
+                    iframeElement[LiveChatWidget.BootstrapperConstants.ALLOW] = LiveChatWidget.BootstrapperConstants.AllowValues;
+                    iframeElement.allowFullscreen = true;
+                    iframeElement.setAttribute(LiveChatWidget.BootstrapperConstants.AllowFullScreen, "true");
+                    iframeElement.setAttribute(LiveChatWidget.BootstrapperConstants.MozillaAllowFullScreen, "true");
+                    iframeElement.setAttribute(LiveChatWidget.BootstrapperConstants.WebKitAllowFullScreen, "true");
+                    iframeElement.setAttribute("aria-hidden", "true");
+                    iframeElement.style[LiveChatWidget.StyleConstants.Position] = LiveChatWidget.DefaultCssValues.IFramePosition;
+                    iframeElement.style[LiveChatWidget.StyleConstants.BorderWidth] = LiveChatWidget.DefaultCssValues.FrameBorderWidth;
+                    iframeElement.style[LiveChatWidget.StyleConstants.ZIndex] = LiveChatWidget.DefaultCssValues.IFrameZIndex;
+                    try {
+                        var pageBody = document.getElementsByTagName(LiveChatWidget.BootstrapperConstants.Body)[0];
+                        pageBody.appendChild(iframeElement);
+                    }
+                    catch (e) {
+                        window.onload = function () {
+                            document.getElementsByTagName(LiveChatWidget.BootstrapperConstants.Body)[0].appendChild(iframeElement);
+                        };
+                    }
+                    LiveChatWidget.IFrameMessageHandler.addIframeEventListener();
+                    var _a;
+                };
+                LiveChatBootstrapperWebChat.convertNullToString = function (str) {
+                    return this.isNullOrUndefined(str) ? "" : str;
+                };
+                LiveChatBootstrapperWebChat.resizeMSLcwIframe = function (id, className) {
+                    var msLcwIframe = document.getElementById(id);
+                    if (!msLcwIframe)
+                        return;
+                    var classes = [];
+                    for (var i = 0; i < msLcwIframe.classList.length; i++) {
+                        classes.push(msLcwIframe.classList[i]);
+                    }
+                    for (var i = 0; i < classes.length; i++) {
+                        msLcwIframe.classList.remove(classes[i]);
+                    }
+                    if (className) {
+                        var classArr = className.split(" ");
+                        classArr.forEach(function (element) {
+                            msLcwIframe.classList.add(element);
+                        });
+                    }
+                    if (LiveChatBootstrapperWebChat.iframePosition !== null) {
+                        msLcwIframe.classList.add(LiveChatBootstrapperWebChat.iframePosition.toString());
+                    }
+                    var bootScript = document.querySelector("script#" + LiveChatWidget.BootstrapperConstants.MicrosoftOmnichannelLCWidget);
+                    var enableAutofill = bootScript.getAttribute(LiveChatWidget.BootstrapperConstants.EnableAutofill);
+                    if (!enableAutofill || enableAutofill.trim().length === 0) {
+                        enableAutofill = "false";
+                    }
+                    var isAutofill = enableAutofill.trim().toLowerCase() === "true";
+                    if (isAutofill) {
+                        msLcwIframe.classList.add(Microsoft.Omnichannel.LiveChatWidget.IFrameBootstrapperValues.ocAutofillFrame);
+                    }
+                    if (LiveChatBootstrapperWebChat.renderOnMobileDevice) {
+                        msLcwIframe.classList.add(LiveChatWidget.IFrameBootstrapperValues.inAppClassName);
+                    }
+                };
+                LiveChatBootstrapperWebChat.repositionMSLcwIframe = function (id, position) {
+                    var msLcwIframe = document.getElementById(id);
+                    if (!msLcwIframe || !msLcwIframe.classList
+                        || position === LiveChatBootstrapperWebChat.iframePosition) {
+                        return;
+                    }
+                    for (var i = 0; i < msLcwIframe.classList.length; i++) {
+                        if (msLcwIframe.classList[i] === LiveChatWidget.IFrameBootstrapperValues.bottomLeft || msLcwIframe.classList[i] === LiveChatWidget.IFrameBootstrapperValues.bottomRight) {
+                            msLcwIframe.classList.remove(msLcwIframe.classList[i]);
+                        }
+                    }
+                    LiveChatBootstrapperWebChat.iframePosition = position;
+                    msLcwIframe.classList.add(position);
+                };
+                LiveChatBootstrapperWebChat.createCustomEvent = function (eventName, payload) {
+                    var eventDetails = (payload) ? {
+                        detail: payload
+                    } : undefined;
+                    var event = null;
+                    try {
+                        event = new CustomEvent(eventName, eventDetails);
+                    }
+                    catch (e) {
+                        event = document.createEvent(LiveChatWidget.EventConstants.CustomEvent);
+                        event.initCustomEvent(eventName, true, true, eventDetails);
+                    }
+                    return event;
+                };
+                LiveChatBootstrapperWebChat.prototype.initializeLiveChat = function () {
+                    var target_window = window[Microsoft.Omnichannel.LiveChatWidget.BootstrapperConstants.MicrosoftOmnichannelLCWidgetChatIframePageId];
+                    var existingIframeElement = document.getElementById(Microsoft.Omnichannel.LiveChatWidget.BootstrapperConstants.MicrosoftOmnichannelLCWidgetChatIframePageId);
+                    LiveChatBootstrapperWebChat.appendViewportMeta();
+                    LiveChatBootstrapperWebChat.addKeyboardEventHandler();
+                    if (LiveChatBootstrapperWebChat.shouldRenderChatWidget(target_window, existingIframeElement)) {
+                        if (!window[LiveChatWidget.BootstrapperConstants.InitializerScriptDownloadTriggeredFlag]) {
+                            window[LiveChatWidget.BootstrapperConstants.InitializerScriptDownloadTriggeredFlag] = true;
+                            var self_1 = this;
+                            var bootScript = document.querySelector(LiveChatWidget.BootstrapperConstants.ScriptSelector + LiveChatWidget.BootstrapperConstants.MicrosoftOmnichannelLCWidget);
+                            var liveChatScriptRoot_1 = bootScript.getAttribute(LiveChatWidget.BootstrapperConstants.SRC);
+                            if (liveChatScriptRoot_1.indexOf(LiveChatWidget.BootstrapperConstants.WebChatVersionScripts) === -1) {
+                                liveChatScriptRoot_1 = liveChatScriptRoot_1.replace(LiveChatWidget.BootstrapperConstants.Scripts, LiveChatWidget.BootstrapperConstants.WebChatVersionScripts);
+                            }
+                            liveChatScriptRoot_1 = liveChatScriptRoot_1.substring(0, liveChatScriptRoot_1.lastIndexOf("/") + 1);
+                            var liveChatInitializerFileNameWithExtension_1 = LiveChatWidget.BootstrapperConstants.InitializerScriptPath;
+                            var libRoot = liveChatScriptRoot_1.trim().replace(LiveChatWidget.BootstrapperConstants.Scripts, LiveChatWidget.BootstrapperConstants.Lib);
+                            var liveChatAllLibsPath = libRoot.trim() + LiveChatWidget.BootstrapperConstants.LibsScriptPath;
+                            var libsResourceOnload = function () {
+                                var liveChatInitializerPath = liveChatScriptRoot_1.trim() + liveChatInitializerFileNameWithExtension_1;
+                                self_1.loadJSResource(liveChatInitializerPath, null, null);
+                            };
+                            this.loadJSResource(liveChatAllLibsPath, libsResourceOnload, null);
+                        }
+                    }
+                    else if (LiveChatBootstrapperWebChat.shouldAddIframe(target_window, existingIframeElement)) {
+                        var bootScript = document.querySelector(LiveChatWidget.BootstrapperConstants.ScriptSelector + LiveChatWidget.BootstrapperConstants.MicrosoftOmnichannelLCWidget);
+                        LiveChatBootstrapperWebChat.attachLcwIframeStyle(bootScript);
+                        LiveChatBootstrapperWebChat.attachLcwIframe(bootScript);
+                        LiveChatWidget.ClientSdkDelegation.getInstance().settingUpDelegation();
+                    }
+                };
+                LiveChatBootstrapperWebChat.appendViewportMeta = function () {
+                    var metas = document.getElementsByTagName(LiveChatWidget.BootstrapperConstants.Meta);
+                    for (var i = 0; i < metas.length; i++) {
+                        if (metas[i].name === LiveChatWidget.BootstrapperConstants.Viewport) {
+                            return;
+                        }
+                    }
+                    var viewportMeta = document.createElement(LiveChatWidget.BootstrapperConstants.Meta);
+                    viewportMeta.name = LiveChatWidget.BootstrapperConstants.Viewport;
+                    viewportMeta.content = LiveChatWidget.BootstrapperConstants.ViewportMetaContent;
+                    document.getElementsByTagName(LiveChatWidget.BootstrapperConstants.Head)[0].appendChild(viewportMeta);
+                };
+                LiveChatBootstrapperWebChat.addKeyboardEventHandler = function () {
+                    window.addEventListener(LiveChatWidget.EventConstants.keydown, this.handleKeydown);
+                };
+                LiveChatBootstrapperWebChat.handleKeydown = function (e) {
+                    if (e.ctrlKey && e.keyCode === LiveChatWidget.IFrameBootstrapperValues.KEY_SLASH) {
+                        var message = {
+                            messageName: LiveChatWidget.IFrameBootstrapperValues.handleControlSlash
+                        };
+                        LiveChatBootstrapperWebChat.postIframeMessage(message);
+                    }
+                };
+                LiveChatBootstrapperWebChat.postIframeMessage = function (message) {
+                    var iframes = document.querySelectorAll(LiveChatWidget.BootstrapperConstants.Iframe);
+                    for (var i = 0; i < iframes.length; i++) {
+                        if (iframes[i].id === LiveChatWidget.BootstrapperConstants.MicrosoftOmnichannelLCWidgetChatIframePageId) {
+                            iframes[i].contentWindow.postMessage(message, "*");
+                        }
+                    }
+                };
+                LiveChatBootstrapperWebChat.isNullOrEmptyString = function (s) {
+                    return LiveChatBootstrapperWebChat.isNullOrUndefined(s) || s === "";
+                };
+                LiveChatBootstrapperWebChat.isNullOrUndefined = function (obj) {
+                    return (obj === null || obj === undefined);
+                };
+                LiveChatBootstrapperWebChat.getQueryParameters = function (urlParameterStrings) {
+                    var queryParams = {};
+                    if (!LiveChatBootstrapperWebChat.isNullOrEmptyString(urlParameterStrings)) {
+                        var urlParams = urlParameterStrings.split("?");
+                        if (urlParams.length > 1) {
+                            urlParameterStrings = urlParams[1];
+                        }
+                        var urlParameters = urlParameterStrings.split("&");
+                        if (urlParameters.length > 0) {
+                            urlParameters.forEach(function (urlParameter) {
+                                var pair = urlParameter.split("=");
+                                if (pair.length === 2) {
+                                    queryParams[pair[0]] = pair[1];
+                                }
+                            });
+                        }
+                    }
+                    return queryParams;
+                };
+                LiveChatBootstrapperWebChat.renderOnMobileDevice = false;
+                LiveChatBootstrapperWebChat.isLCWReady = false;
+                LiveChatBootstrapperWebChat.shouldRenderChatWidget = function (target_window, existingIframeElement) {
+                    return target_window && !existingIframeElement;
+                };
+                LiveChatBootstrapperWebChat.shouldAddIframe = function (target_window, existingIframeElement) {
+                    return !target_window && !existingIframeElement;
+                };
+                return LiveChatBootstrapperWebChat;
+            }());
+            LiveChatWidget.LiveChatBootstrapperWebChat = LiveChatBootstrapperWebChat;
+        })(LiveChatWidget = Omnichannel.LiveChatWidget || (Omnichannel.LiveChatWidget = {}));
+    })(Omnichannel = Microsoft.Omnichannel || (Microsoft.Omnichannel = {}));
+})(Microsoft || (Microsoft = {}));
+(function (funcName, baseObj) {
+    new Microsoft.Omnichannel.LiveChatWidget.LiveChatBootstrapperWebChat().initializeLiveChat();
+})("docReady", window);
